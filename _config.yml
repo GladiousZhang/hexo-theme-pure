@@ -2,12 +2,13 @@
 menu:
   Home: .
   Archives: archives  # 归档
-  Categories: categories  # 分类
+  # Categories: categories  # 分类
   Tags: tags  # 标签
   Repository: repository  # github repositories
-  Books: books  # 豆瓣书单
+  # 等我之后改成微信读书Books: books  # 豆瓣书单
   Links: links  # 友链
   About: about  # 关于
+  sitemap: /sitemap.xml || sitemap
 
 # Enable/Disable menu icons
 menu_icons:
@@ -31,10 +32,10 @@ site:
     width: 40
     height: 40
     url: ../images/logo.png
-  title: Hexo # 页面title
+  title: Gladious' Blog # 页面title
   favicon: /favicon.png
   board: <p>欢迎交流与分享经验!</p> # 站点公告
-  copyright: false # 底部版权信息
+  copyright: true # 底部版权信息
 
 # config
 config:
@@ -113,7 +114,7 @@ share:
 # 项目仓库信息（将会覆盖 github 项）
 repository:
   platform: github # 托管平台（github | gitee）
-  username: cofess # 用户名
+  username: gladiouszhang # 用户名
 
 # Comment
 # Gitment
@@ -143,13 +144,14 @@ comment:
   valine: # Valine. https://valine.js.org
     appid:  # your leancloud application appid
     appkey:  # your leancloud application appkey
-    notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-    verify: false # Verification code
-    placeholder: Just go go # comment box placeholder
+    notify: true # mail notifier , https://github.com/xCss/Valine/wiki
+    verify: true # Verification code
+    placeholder: 在此输入评论 # comment box placeholder
     avatar: mm # gravatar style
     meta: nick,mail,link # custom comment header
     pageSize: 10 # pagination size
     visitor: false # Article reading statistic https://valine.js.org/visitor.html
+    serverURLs: # 你的serverURL  
 
 # douban 豆瓣书单
 # Api：
@@ -163,15 +165,15 @@ comment:
   # https://api.douban.com/v2/movie/subject/:id 单个电影信息
   # https://api.douban.com/v2/movie/search?q={text} 电影搜索
 douban:
-  user: # 豆瓣用户名
+  user: 234978131 # 豆瓣用户名
   start: 0 # 从哪一条记录开始
   count: 100 # 获取豆瓣书单数据条数
-  apikey: # 豆瓣apikey
+  apikey: 0b2bdeda43b5688921839c8ecb20399b# 豆瓣apikey
   
 # PV
 pv:
   busuanzi:
-    enable: false  # 不蒜子统计
+    enable: true  # 不蒜子统计
   leancloud:
     enable: false  # leancloud统计
     app_id: # leancloud <AppID>
@@ -179,7 +181,7 @@ pv:
         
 # wordcount
 postCount:
-  enable: false
+  enable: true
   wordcount: true  # 文章字数统计
   min2read: true  # 阅读时长预计 
 
@@ -202,51 +204,59 @@ profile:
   articleSelfBlock: false # 关闭文章下方的自我介绍
   avatar: images/avatar.jpg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-  author: 昵称
-  author_title: Web Developer & Designer
-  author_description: 个人简介。
-  location: Shenzhen, China
-  follow: https://github.com/cofess
+  author: Gladious
+  author_title: 学生
+  author_description: 西安电子科技大学硕士在读
+  location: Shaanxi, China
+  follow: https://github.com/gladiouszhang
   # Social Links
   social:
     links:
-      github: https://github.com/cofess
-      weibo: http://weibo.com/cofess
-      twitter: https://twitter.com/iwebued
+      github: https://github.com/gladiouszhang
+      weibo: https://weibo.com/n/Gladious_Zhang
+      # twitter: https://twitter.com/iwebued、
       # facebook: /
       # dribbble: /
-      behance: https://www.behance.net/cofess
-      rss: atom.xml
+      # behance: https://www.behance.
     link_tooltip: true # enable the social link tooltip, options: true, false
   # My Skills 
   skills:
+    C: ★★★★☆
+    Golang: ★★★★☆
+    Java: ★★★☆☆
+    Solidity: ★★★☆☆
+    Kubernetes: ★★★☆☆
     Git: ★★★☆☆
-    Gulp: ★★★☆☆
-    Javascript: ★★★☆☆
-    HTML+CSS: ★★★☆☆
-    Bootstrap: ★★★☆☆
-    ThinkPHP: ★★★☆☆
-    平面设计: ★★★☆☆
+    Python: ★★☆☆☆
+    Vue: ★☆☆☆☆
+    React: ★☆☆☆☆
+    
   # My Personal Links
   links:
-    Github: https://github.com/cofess
-    Blog: http://blog.cofess.com
-    微博: http://weibo.com/cofess
-    花瓣: http://huaban.com/cofess
-    Behance: https://www.behance.net/cofess
+    Github: https://github.com/gladiouszhang
+    Blog: https://gladiouszhang.github.io
+    微博: https://weibo.com/n/gladious_zhang
   # My Personal Labels
   labels:
-    - 前端
+    - 后端开发
+    - 分布式系统
+    - 边缘计算
+    - 区块链
     - 前端开发
-    - 前端重构
-    - Web前端
-    - 网页重构
   # My Personal Works
   works:
-    name:
-      link: http://www.example.com
-      date: 2016
+    基于联盟链的物联网设备认证:
+      date: 2024-04
+    西安言古科技官网:
+      link: https://yygu.cn
+      date: 2024-05
+    基于K8S的集群GPU调度: 
+      date: 2024-07
   # My Personal Projects
   projects:
-    cofess/gulp-startpro: https://github.com/cofess/gulp-startpro
-    cofess/hexo-theme-pure: https://github.com/cofess/hexo-theme-pure
+    # cofess/gulp-startpro: https://github.com/cofess/gulp-startpro
+    # cofess/hexo-theme-pure: https://github.com/cofess/hexo-theme-pure
+
+# Bing Webmaster tools verification.
+# See: https://www.bing.com/webmaster
+bing_site_verification: true

@@ -8,7 +8,7 @@ menu:
   # 等我之后改成微信读书Books: books  # 豆瓣书单
   Links: links  # 友链
   About: about  # 关于
-  sitemap: /sitemap.xml || sitemap
+  # sitemap: /sitemap.xml || sitemap
 
 # Enable/Disable menu icons
 menu_icons:
@@ -142,16 +142,15 @@ comment:
     language: zh-CN
     
   valine: # Valine. https://valine.js.org
-    appid:  # your leancloud application appid
-    appkey:  # your leancloud application appkey
+    appid: GNXx14HnrCFqRSxo50bKuXAt-gzGzoHsz # your leancloud application appid
+    appkey: 68hg4AgzSBf1I5q0GwkpKIyu # your leancloud application appkey
     notify: true # mail notifier , https://github.com/xCss/Valine/wiki
     verify: true # Verification code
-    placeholder: 在此输入评论 # comment box placeholder
+    placeholder: 欢迎留下您的评论😊 # comment box placeholder
     avatar: mm # gravatar style
     meta: nick,mail,link # custom comment header
     pageSize: 10 # pagination size
     visitor: false # Article reading statistic https://valine.js.org/visitor.html
-    serverURLs: # 你的serverURL  
 
 # douban 豆瓣书单
 # Api：
